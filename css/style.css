@@ -1,0 +1,347 @@
+/*
+
+- Use "boundry" containers to keep sections within page widths
+- Order CSS properties in the order of the HTML (personal preference)
+- Keep everything in style.css
+- Put global / typography styles near the top
+
+*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.clearfix:after {
+  display: block;
+  height: 0;
+  clear: both;
+  line-height: 0;
+  content: ".";
+  visibility: hidden;
+}
+
+
+/* Your styles here */
+html{
+  
+  font-size: 16px;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #666;
+}
+
+
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+h1 { font-size: 2.074rem; }
+h2 { font-size: 1.728rem; }
+h3 { font-size: 1.728rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1.75rem; }
+
+p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 22px;
+  margin: 0 0 10px 0; 
+}
+p:last-child{
+  margin-bottom: 0;
+}
+
+li {
+  list-style: none;
+
+}
+
+.site{
+  overflow: hidden;
+}
+.boundary{
+  width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*   Header   */
+
+.header{
+
+  display: inline-block;
+  border: none;
+  position: fixed;
+  background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height:85px;
+
+  
+}
+
+ .logo  {
+  float: left;
+  max-width: 300px;
+  height: 80px;
+  background: transparent;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+nav {
+  float: right;
+  list-style: none;
+  margin: 20px;
+  width: auto;
+}
+
+nav ul li {
+  float: left;
+  text-align: center;
+
+  
+}
+
+nav ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #fbd334;
+}
+
+
+.myButton {
+  color: #fff;
+  background-color: #FBB534;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+}
+.myButton:hover {
+  background-color: #346392;
+  text-shadow: -1px 1px #27496d;
+}
+
+.myButton:active {
+  background-color: #27496d;
+  text-shadow: -1px 1px #193047;
+}
+
+.myButton a{
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Hero */
+.backgroundPhoto {
+  padding: 20%;
+  margin: 0;
+  background: url(../images/hands.jpeg) center;
+  background-size: cover;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font: caption;
+  font-size: 1rem;
+}
+
+.about {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 10px;
+  border-right-style: none;
+
+}
+
+
+.about {
+  text-align: center;
+}
+
+
+.info  .boundary{
+  float: left;
+  display: block;
+  width: 33.333%;
+  padding: 10px;
+}
+
+ .info .boundary{
+  background: #346392;
+  color: white;
+  border-right: 1px solid #ccc;
+  height: 200px;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.info:last-of-type {
+  border-right: none;
+}
+
+h3{
+  margin: 0;
+  padding: 10px;
+  border-right-style: none;
+  text-align: center;
+  background: #346392;
+  color: white;
+}
+
+.contact  h6{
+text-align: center;
+
+}
+
+.contact .boundary{
+  border-top: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*   Footer  */
+
+.social-media-icons {
+  background: #eee;
+
+}
+
+.social-media-icons ul {
+  padding-top: 1px; padding: 1px;
+  float: right;
+
+}
+.social-media-icons ul li {
+  display: inline;
+}
+
+
+.last, footer {
+  /*display: inline-block;*/
+  background: #eee;
+  padding: 10px 10px;
+  /*margin: 10px;*/
+  /*width: 100%;*/
+}
+
+
+
+
+/* When your screen becomes 1024px wide or less, run all of the CSS below */
+
+/* When your screen becomes 768px wide or less, run all of the CSS below */
+
+/*@media screen and (max-width: XXXpx) {
+
+}*/
+
+
+@media screen and (max-width: 768px) {
+  html{
+    font-size: 18px;
+
+  }
+
+
+
+
+.header{
+
+  display: inline;
+  width: 100%;
+  position: inherit;
+
+}
+
+
+
+.logo{
+  display: none;
+}
+  
+
+  .backgroundPhoto, h1{
+    display: none;
+  }
+
+  nav{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+  }
+  nav ul li{
+    width: 100%;
+    padding: 0;
+    background: #346392;
+
+  }
+  nav ul li:last-child{
+    margin-bottom: 0;
+  }
+
+  
+   h2 {
+    text-align: center;    
+
+  }
+
+  .boundary{
+    width: 100%;
+  }
+
+
+  .info .boundary{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
